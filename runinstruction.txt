@@ -1,0 +1,3 @@
+.\checker .\testcase1.in .\testcase1.out | Set-Content testcase1report.log
+.\checker .\testcase2.in .\testcase2.out | Set-Content testcase2report.log
+.\checker .\testcase3.in .\testcase3.out | Set-Content testcase3report.log
