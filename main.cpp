@@ -207,7 +207,7 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
     p.x = ge.x, p.y = ge.y;
-    BackPlane[t + Planedis[id][dst] - 1 + Planedis[newid][dst] - 1 + 1].push_back(p);
+    BackPlane[t + Planedis[id][dst]+ Planedis[newid][dst]].push_back(p);
     if (NeedRefersh.x >= 0 && NeedRefersh.y >= 0)
     {
         refe[t + Planedis[id][dst]].push_back({NeedRefersh.x, NeedRefersh.y});
@@ -263,7 +263,7 @@ int main()
         }
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        if (elapsed.count() >= 120) {
+        if (elapsed.count() >= 300) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
