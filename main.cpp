@@ -3,8 +3,10 @@
 #include <queue>
 #include <map>
 #include <vector>
+#include <string.h>
 #include <chrono>
 #include <random>
+#include <algorithm>
 #include <stdlib.h>
 
 const int N = 5005;
@@ -230,7 +232,7 @@ int main()
     }
     std::sort(b, b + NumBaseBlue, [&](Base b1, Base b2)
     {
-        return b1.val / b1.def > b2.val / b2.def;
+        return b1.val / std::max(1, b1.def) > b2.val / std::max(1, b2.def);
     });
     std::cerr << "Total Score is: " << TotalScore << "\n";
     std::cin >> NumPlane;

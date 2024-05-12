@@ -1,0 +1,664 @@
+fuel 0 34
+missile 0 5
+move 0 2
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+attack 0 0 5
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 3
+OK
+fuel 0 66
+missile 0 7
+move 0 2
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 1
+OK
+move 0 2
+OK
+move 0 2
+OK
+attack 0 0 7
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+fuel 0 38
+missile 0 3
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+attack 0 2 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+fuel 0 32
+missile 0 5
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+attack 0 2 5
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+fuel 0 67
+missile 0 3
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+attack 0 2 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 1
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 1
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 1
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 2
+OK
+fuel 0 62
+missile 0 6
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 1
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+attack 0 2 6
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 0
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+move 0 3
+OK
+move 0 3
+OK
+move 0 1
+OK
+fuel 0 38
+missile 0 9
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 0
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+move 0 2
+OK
+attack 0 2 9
+OK
