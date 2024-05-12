@@ -143,8 +143,8 @@ bool CheckPlaneCanGo(Plane p, Base gd, Base gs, Base ge)
     Pos dst = {gd.x, gd.y};
     Pos eds = {ge.x, ge.y};
     int id = GetBaseId(src);
-    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, Planepre[id][dst]);
-    if (dis1 + dis2 + 1 <= gs.gas && dis1 + dis2 + 1 <= p.maxgas) return true;
+    int dis1 = GetDis(src, Planepre[id][dst]), dis2 = GetDis(eds, Planepre[id][dst]);
+    if (dis1 + dis2 <= gs.gas + p.gas && dis1 + dis2 <= p.maxgas) return true;
     return false;
 }
 Consume GetConsume(Plane p, Base gd, Base gs, Base ge)
@@ -153,7 +153,7 @@ Consume GetConsume(Plane p, Base gd, Base gs, Base ge)
     Pos dst = {gd.x, gd.y};
     Pos eds = {ge.x, ge.y};
     int id = GetBaseId(src);
-    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, Planepre[id][dst]);
+    int dis1 = GetDis(src, Planepre[id][dst]), dis2 = GetDis(eds, Planepre[id][dst]);
     int cc = std::max(std::min({p.maxc, gs.c, gd.def}) - p.c, 0);
     int cg = std::max(std::min(dis1 + dis2 - p.gas, p.maxgas - p.gas),0);
     return {cg, cc};
@@ -180,34 +180,26 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
     Pos eds = {ge.x, ge.y};
-    Pos cur = dst;
     int id = GetBaseId(src);
-    // std::cerr << id<<"\n";
+    Pos cur = Planepre[id][dst];
     while (cur != src)
     {
-        if (cur != dst)
-        {
-            MoveAction[t + Planedis[id][Planepre[id][cur].x][Planepre[id][cur].y]].push_back({p.id, GetDir(Planepre[id][cur], cur)});
-            // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
-        }
+        MoveAction[t + Planedis[id][cur.x][cur.y] - 1].push_back({p.id, GetDir(Planepre[id][cur], cur)});
         cur = Planepre[id][cur];
-        // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
     }
 
     cur = Planepre[id][dst];
     int newid = GetBaseId(eds);
     while (cur != eds)
     {
-        MoveAction[t + Planedis[id][Planepre[id][dst].x][Planepre[id][dst].y] + Planedis[newid][Planepre[id][dst].x][Planepre[id][dst].y] - Planedis[newid][cur.x][cur.y] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
-        // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
+        MoveAction[t + Planedis[id][dst.x][dst.y] - 1 + Planedis[newid][Planepre[id][dst].x][Planepre[id][dst].y] - Planedis[newid][cur.x][cur.y] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
         cur = Planepre[newid][cur];
-        // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
     }
     AttackAction[t + Planedis[id][dst.x][dst.y] - 1].push_back({p.id, GetDir(Planepre[id][dst], dst), cs.c});
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
     p.x = ge.x, p.y = ge.y;
-    BackPlane[t + Planedis[id][dst.x][dst.y]+ Planedis[newid][dst.x][dst.y]].push_back(p);
+    BackPlane[t + Planedis[id][dst.x][dst.y] - 1 + Planedis[newid][Planepre[id][dst].x][Planepre[id][dst].y] + 1].push_back(p);
     if (NeedRefersh.x >= 0 && NeedRefersh.y >= 0)
     {
         refe[t + Planedis[id][dst.x][dst.y]].push_back({NeedRefersh.x, NeedRefersh.y});
@@ -217,7 +209,7 @@ int main()
 {
     freopen("../testcase2.in", "r", stdin);
     freopen("../testcase2.out", "w", stdout);
-    srand(time(0));
+    srand(507);
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
@@ -258,7 +250,7 @@ int main()
     {
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        if (elapsed.count() >= 300) {
+        if (elapsed.count() >= 900) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
@@ -280,9 +272,6 @@ int main()
             {
                 Plane cur = PlaneQueue.front();
                 PlaneQueue.pop();
-                // std::cerr<<"QWQ\n";
-                // std::cerr << 1.0 * rand() / RAND_MAX << " "<< std::max(1.0 * r[i].gas / r[i].maxgas, 1.0 * r[i].c / r[i].maxc) << "\n";
-                // std::cerr << std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc);
                 if (1.0 * rand() / RAND_MAX > std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc))
                 {
                     int newid = -1;
