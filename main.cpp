@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 const int N = 5005;
-const int K = 5005;
+const int K = 205;
 const int MaxT = 15000;
 
 int n, m;
@@ -87,18 +87,18 @@ std::vector<Fuel> FuelAction[MaxT + 5];
 std::vector<Missile> MissileAction[MaxT + 5];
 std::vector<Plane> BackPlane[MaxT + 5];
 
-std::map<Pos, int> Planedis[K];
-std::map<Pos, Pos> Planepre[K];
+// std::map<Pos, int> Planedis[K];
+std::map<Pos, Pos> Planepre[N];
+
+int Planedis[N][K][K];
 
 std::vector<Pos> refe[MaxT + 5];
 
 void GetBaseDis(int id, Base srcbase)
 {
-    Planedis[id].clear();
-    Planepre[id].clear();
     Pos src = {srcbase.x, srcbase.y};
     DisQueue.push(src);
-    Planedis[id][src] = 0;
+    Planedis[id][src.x][src.y] = 0;
     while (!DisQueue.empty())
     {
         Pos cur = DisQueue.front();
@@ -107,8 +107,8 @@ void GetBaseDis(int id, Base srcbase)
         {
             Pos ncur = {cur.x + dx[i], cur.y + dy[i]};
             if (ncur.x < 0 || ncur.x >= n || ncur.y < 0 || ncur.y >= m) continue;
-            if (Planedis[id].find(ncur) != Planedis[id].end()) continue;
-            Planedis[id][ncur] = Planedis[id][cur] + 1;
+            if (Planedis[id][ncur.x][ncur.y] >= 0) continue;
+            Planedis[id][ncur.x][ncur.y] = Planedis[id][cur.x][cur.y] + 1;
             Planepre[id][ncur] = cur;
             if (s[ncur.x][ncur.y] != '#') DisQueue.push(ncur);
         }
@@ -134,8 +134,8 @@ int GetBaseId(Pos cur)
 int GetDis(Pos src, Pos dst)
 {
     int id = GetBaseId(src);
-    if (Planedis[id].find(dst) == Planedis[id].end()) return 1e9;
-    return Planedis[id][dst];
+    if (Planedis[id][dst.x][dst.y] == -1) return 1e9;
+    return Planedis[id][dst.x][dst.y];
 }
 bool CheckPlaneCanGo(Plane p, Base gd, Base gs, Base ge)
 {
@@ -187,7 +187,7 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     {
         if (cur != dst)
         {
-            MoveAction[t + Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(Planepre[id][cur], cur)});
+            MoveAction[t + Planedis[id][Planepre[id][cur].x][Planepre[id][cur].y]].push_back({p.id, GetDir(Planepre[id][cur], cur)});
             // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
         }
         cur = Planepre[id][cur];
@@ -198,19 +198,19 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     int newid = GetBaseId(eds);
     while (cur != eds)
     {
-        MoveAction[t + Planedis[id][Planepre[id][dst]] + Planedis[newid][Planepre[id][dst]] - Planedis[newid][cur] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
+        MoveAction[t + Planedis[id][Planepre[id][dst].x][Planepre[id][dst].y] + Planedis[newid][Planepre[id][dst].x][Planepre[id][dst].y] - Planedis[newid][cur.x][cur.y] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
         // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
         cur = Planepre[newid][cur];
         // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
     }
-    AttackAction[t + Planedis[id][dst] - 1].push_back({p.id, GetDir(Planepre[id][dst], dst), cs.c});
+    AttackAction[t + Planedis[id][dst.x][dst.y] - 1].push_back({p.id, GetDir(Planepre[id][dst], dst), cs.c});
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
     p.x = ge.x, p.y = ge.y;
-    BackPlane[t + Planedis[id][dst]+ Planedis[newid][dst]].push_back(p);
+    BackPlane[t + Planedis[id][dst.x][dst.y]+ Planedis[newid][dst.x][dst.y]].push_back(p);
     if (NeedRefersh.x >= 0 && NeedRefersh.y >= 0)
     {
-        refe[t + Planedis[id][dst]].push_back({NeedRefersh.x, NeedRefersh.y});
+        refe[t + Planedis[id][dst.x][dst.y]].push_back({NeedRefersh.x, NeedRefersh.y});
     }
 }
 int main()
@@ -250,23 +250,26 @@ int main()
         pe[i] = cur;
         PlaneQueue.push(cur);
     }
+    memset(Planedis, -1, sizeof(Planedis));
     for (int k = 0; k < NumBaseBlue; ++k) GetBaseDis(k, b[k]);
     int BreakTime = MaxT;
     int ExpectedScore = 0;
     for (int t = 0; t < MaxT; ++t)
     {
-        std::cerr << "Running on Time: " << t << "\n";
-        for (auto ret : refe[t])  s[ret.x][ret.y] = '.';
-        if (refe[t].size() > 0)
-        {
-            for (int k = 0; k < NumBaseBlue; ++k) GetBaseDis(k, b[k]);
-        }
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
         if (elapsed.count() >= 300) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
+        }
+        std::cerr << "Running on Epochs: " << t << ". The time now is: " << elapsed.count() << "seconds" << ". ";
+        std::cerr << "The Expected Score now is: " << ExpectedScore << "\n";
+        for (auto ret : refe[t])  s[ret.x][ret.y] = '.';
+        if (refe[t].size() > 0)
+        {
+            memset(Planedis, -1, sizeof(Planedis));
+            for (int k = 0; k < NumBaseBlue; ++k) GetBaseDis(k, b[k]);
         }
         for (auto pl:BackPlane[t]) PlaneQueue.push(pl);
 
