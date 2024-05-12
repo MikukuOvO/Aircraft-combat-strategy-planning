@@ -5,9 +5,10 @@
 #include <vector>
 #include <chrono>
 #include <random>
+#include <stdlib.h>
 
 const int N = 5005;
-const int K = 15;
+const int K = 5005;
 const int MaxT = 15000;
 
 int n, m;
@@ -37,6 +38,7 @@ struct Base
 {
     int x, y;
     int gas, c, def, val;
+    int maxgas;
 };
 
 Base b[N], r[N];
@@ -88,7 +90,7 @@ std::vector<Plane> BackPlane[MaxT + 5];
 std::map<Pos, int> Planedis[K];
 std::map<Pos, Pos> Planepre[K];
 
-void GetPlaneDis(int id, Base srcbase)
+void GetBaseDis(int id, Base srcbase)
 {
     Pos src = {srcbase.x, srcbase.y};
     DisQueue.push(src);
@@ -117,35 +119,37 @@ int GetBaseId(Plane cur)
     }
     return -1;
 }
-int GetPlaneId(Pos cur)
+int GetBaseId(Pos cur)
 {
-    for (int i = 0; i < NumPlane; ++i)
+    for (int i = 0; i < NumBaseBlue; ++i)
     {
-        if (pe[i].x == cur.x && pe[i].y == cur.y) return i;
+        if (b[i].x == cur.x && b[i].y == cur.y) return i;
     }
     return -1;
 }
 int GetDis(Pos src, Pos dst)
 {
-    int id = GetPlaneId(src);
+    int id = GetBaseId(src);
     if (Planedis[id].find(dst) == Planedis[id].end()) return 1e9;
     return Planedis[id][dst];
 }
-bool CheckPlaneCanGo(Plane p, Base gd, Base gs)
+bool CheckPlaneCanGo(Plane p, Base gd, Base gs, Base ge)
 {
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
-    int dis = GetDis(src, dst) - 1;
-    if (dis * 2 + 1 <= gs.gas && dis * 2 + 1 <= p.maxgas) return true;
+    Pos eds = {ge.x, ge.y};
+    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, dst) - 1;
+    if (dis1 + dis2 + 1 <= gs.gas && dis1 + dis2 + 1 <= p.maxgas) return true;
     return false;
 }
-Consume GetConsume(Plane p, Base gd, Base gs)
+Consume GetConsume(Plane p, Base gd, Base gs, Base ge)
 {
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
-    int dis = GetDis(src, dst) - 1;
+    Pos eds = {ge.x, ge.y};
+    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, dst) - 1;
     int cc = std::max(std::min({p.maxc, gs.c, gd.def}) - p.c, 0);
-    int cg = std::max(dis * 2 + 1 - p.gas, 0);
+    int cg = std::max(dis1 + dis2 + 1 - p.gas, 0);
     return {cg, cc};
 }
 void RemoveGraphIcon(Base cur)
@@ -165,32 +169,47 @@ int GetDir(Pos lst, Pos nxt)
     if (lst.x == nxt.x && lst.y + 1 == nxt.y) return 3;
     return -1;
 }
-void SetMoveAction(int t, Plane p, Base gd, Base gs, Consume cs)
+void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs)
 {
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
+    Pos eds = {ge.x, ge.y};
     Pos cur = dst;
-    int id = GetPlaneId(src);
+    int id = GetBaseId(src);
     // std::cerr << id<<"\n";
     while (cur != src)
     {
         if (cur != dst)
         {
             MoveAction[t + Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(Planepre[id][cur], cur)});
-            MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
+            // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
         }
         cur = Planepre[id][cur];
+        // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
+    }
+
+    cur = dst;
+    int newid = GetBaseId(eds);
+    while (cur != eds)
+    {
+        if (cur != dst)
+        {
+            MoveAction[t + Planedis[id][Planepre[id][dst]] + Planedis[newid][dst] - Planedis[newid][cur]].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
+            // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
+        }
+        cur = Planepre[newid][cur];
         // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
     }
     AttackAction[t + Planedis[id][dst] - 1].push_back({p.id, GetDir(Planepre[id][dst], dst), cs.c});
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
-    BackPlane[t + (Planedis[id][dst] - 1) * 2 + 1].push_back(p);
+    BackPlane[t + Planedis[id][dst] - 1 + Planedis[newid][dst] - 1 + 1].push_back(p);
 }
 int main()
 {
-    freopen("../testcase3.in", "r", stdin);
-    freopen("../testcase3.out", "w", stdout);
+    freopen("../testcase2.in", "r", stdin);
+    freopen("../testcase2.out", "w", stdout);
+    srand(time(0));
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
@@ -206,6 +225,7 @@ int main()
     {
         std::cin >> r[i].x >> r[i].y;
         std::cin >> r[i].gas >> r[i].c >> r[i].def >> r[i].val;
+        r[i].maxgas = r[i].gas;
         TotalScore += r[i].val;
     }
     std::sort(b, b + NumBaseBlue, [&](Base b1, Base b2)
@@ -222,7 +242,7 @@ int main()
         pe[i] = cur;
         PlaneQueue.push(cur);
     }
-    for (int k = 0; k < NumPlane; ++k) GetPlaneDis(k, b[GetBaseId(pe[k])]);
+    for (int k = 0; k < NumBaseBlue; ++k) GetBaseDis(k, b[k]);
     int BreakTime = MaxT;
     int ExpectedScore = 0;
     for (int t = 0; t < MaxT; ++t)
@@ -245,10 +265,14 @@ int main()
                 Plane cur = PlaneQueue.front();
                 PlaneQueue.pop();
                 // std::cerr<<"QWQ\n";
-                if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)]))
+                if (1.0 * rand() / RAND_MAX > 1.0 * r[i].gas / r[i].maxgas)
+                {
+                    continue;
+                }
+                if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)]))
                 {
                     // std::cerr << "TWT\n";
-                    Consume cs = GetConsume(cur, r[i], b[GetBaseId(cur)]);
+                    Consume cs = GetConsume(cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)]);
                     r[i].def -= cs.c;
                     if (r[i].def <= 0)
                     {
@@ -256,7 +280,7 @@ int main()
                         ExpectedScore += r[i].val;
                     }
                     ActionOnBase(cs, b[GetBaseId(cur)]);
-                    SetMoveAction(t, cur, r[i], b[GetBaseId(cur)], cs);
+                    SetMoveAction(t, cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)], cs);
                 }
                 else tmpQueue.push(cur);
             }

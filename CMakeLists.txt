@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28)
-project(v3)
+project(air)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(v3 main.cpp)
+add_executable(air main.cpp)
