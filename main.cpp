@@ -38,7 +38,7 @@ struct Base
 {
     int x, y;
     int gas, c, def, val;
-    int maxgas;
+    int maxgas, maxc;
 };
 
 Base b[N], r[N];
@@ -90,8 +90,12 @@ std::vector<Plane> BackPlane[MaxT + 5];
 std::map<Pos, int> Planedis[K];
 std::map<Pos, Pos> Planepre[K];
 
+std::vector<Pos> refe[MaxT + 5];
+
 void GetBaseDis(int id, Base srcbase)
 {
+    Planedis[id].clear();
+    Planepre[id].clear();
     Pos src = {srcbase.x, srcbase.y};
     DisQueue.push(src);
     Planedis[id][src] = 0;
@@ -138,7 +142,8 @@ bool CheckPlaneCanGo(Plane p, Base gd, Base gs, Base ge)
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
     Pos eds = {ge.x, ge.y};
-    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, dst) - 1;
+    int id = GetBaseId(src);
+    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, Planepre[id][dst]);
     if (dis1 + dis2 + 1 <= gs.gas && dis1 + dis2 + 1 <= p.maxgas) return true;
     return false;
 }
@@ -147,14 +152,15 @@ Consume GetConsume(Plane p, Base gd, Base gs, Base ge)
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
     Pos eds = {ge.x, ge.y};
-    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, dst) - 1;
+    int id = GetBaseId(src);
+    int dis1 = GetDis(src, dst) - 1, dis2 = GetDis(eds, Planepre[id][dst]);
     int cc = std::max(std::min({p.maxc, gs.c, gd.def}) - p.c, 0);
-    int cg = std::max(dis1 + dis2 + 1 - p.gas, 0);
+    int cg = std::max(std::min(dis1 + dis2 - p.gas, p.maxgas - p.gas),0);
     return {cg, cc};
 }
-void RemoveGraphIcon(Base cur)
+Pos RemoveGraphIcon(Base cur)
 {
-    s[cur.x][cur.y] = '.';
+    return {cur.x, cur.y};
 }
 void ActionOnBase(Consume cs, Base &gs)
 {
@@ -169,7 +175,7 @@ int GetDir(Pos lst, Pos nxt)
     if (lst.x == nxt.x && lst.y + 1 == nxt.y) return 3;
     return -1;
 }
-void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs)
+void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos NeedRefersh)
 {
     Pos src = {p.x, p.y};
     Pos dst = {gd.x, gd.y};
@@ -188,22 +194,24 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs)
         // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
     }
 
-    cur = dst;
+    cur = Planepre[id][dst];
     int newid = GetBaseId(eds);
     while (cur != eds)
     {
-        if (cur != dst)
-        {
-            MoveAction[t + Planedis[id][Planepre[id][dst]] + Planedis[newid][dst] - Planedis[newid][cur]].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
-            // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
-        }
+        MoveAction[t + Planedis[id][Planepre[id][dst]] + Planedis[newid][Planepre[id][dst]] - Planedis[newid][cur] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur])});
+        // MoveAction[t + 2 * (Planedis[id][dst] - 1) - Planedis[id][Planepre[id][cur]]].push_back({p.id, GetDir(cur, Planepre[id][cur])});
         cur = Planepre[newid][cur];
         // if (cur.x != 0 || cur.y != 0)std::cerr << cur.x <<" "<< cur.y <<"\n";
     }
     AttackAction[t + Planedis[id][dst] - 1].push_back({p.id, GetDir(Planepre[id][dst], dst), cs.c});
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
+    p.x = ge.x, p.y = ge.y;
     BackPlane[t + Planedis[id][dst] - 1 + Planedis[newid][dst] - 1 + 1].push_back(p);
+    if (NeedRefersh.x >= 0 && NeedRefersh.y >= 0)
+    {
+        refe[t + Planedis[id][dst]].push_back({NeedRefersh.x, NeedRefersh.y});
+    }
 }
 int main()
 {
@@ -218,6 +226,7 @@ int main()
     {
         std::cin >> b[i].x >> b[i].y;
         std::cin >> b[i].gas >> b[i].c >> b[i].def >> b[i].val;
+        b[i].maxgas = b[i].gas, b[i].maxc = b[i].c;
     }
     std::cin >> NumBaseRed;
     int TotalScore = 0;
@@ -225,7 +234,6 @@ int main()
     {
         std::cin >> r[i].x >> r[i].y;
         std::cin >> r[i].gas >> r[i].c >> r[i].def >> r[i].val;
-        r[i].maxgas = r[i].gas;
         TotalScore += r[i].val;
     }
     std::sort(b, b + NumBaseBlue, [&](Base b1, Base b2)
@@ -248,6 +256,11 @@ int main()
     for (int t = 0; t < MaxT; ++t)
     {
         std::cerr << "Running on Time: " << t << "\n";
+        for (auto ret : refe[t])  s[ret.x][ret.y] = '.';
+        if (refe[t].size() > 0)
+        {
+            for (int k = 0; k < NumBaseBlue; ++k) GetBaseDis(k, b[k]);
+        }
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
         if (elapsed.count() >= 120) {
@@ -265,24 +278,59 @@ int main()
                 Plane cur = PlaneQueue.front();
                 PlaneQueue.pop();
                 // std::cerr<<"QWQ\n";
-                if (1.0 * rand() / RAND_MAX > 1.0 * r[i].gas / r[i].maxgas)
+                // std::cerr << 1.0 * rand() / RAND_MAX << " "<< std::max(1.0 * r[i].gas / r[i].maxgas, 1.0 * r[i].c / r[i].maxc) << "\n";
+                // std::cerr << std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc);
+                if (1.0 * rand() / RAND_MAX > std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc))
                 {
-                    continue;
-                }
-                if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)]))
-                {
-                    // std::cerr << "TWT\n";
-                    Consume cs = GetConsume(cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)]);
-                    r[i].def -= cs.c;
-                    if (r[i].def <= 0)
+                    int newid = -1;
+                    int maxval = 0;
+                    for (int j = 0; j < NumBaseRed; ++j)
                     {
-                        RemoveGraphIcon(r[i]);
-                        ExpectedScore += r[i].val;
+                        if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)], b[j]))
+                        {
+                            int curval = b[j].gas * b[j].c;
+                            if (curval > maxval)
+                            {
+                                newid = j;
+                                maxval = curval;
+                            }
+                        }
                     }
-                    ActionOnBase(cs, b[GetBaseId(cur)]);
-                    SetMoveAction(t, cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)], cs);
+                    // std::cerr << newid << "\n";
+                    if (newid >= 0)
+                    {
+                        std::cerr << newid << "\n";
+                        Pos NeedRefersh = {-1, -1};
+                        Consume cs = GetConsume(cur, r[i], b[GetBaseId(cur)], b[newid]);
+                        r[i].def -= cs.c;
+                        if (r[i].def <= 0)
+                        {
+                            NeedRefersh = RemoveGraphIcon(r[i]);
+                            ExpectedScore += r[i].val;
+                        }
+                        ActionOnBase(cs, b[GetBaseId(cur)]);
+                        SetMoveAction(t, cur, r[i], b[GetBaseId(cur)], b[newid], cs, NeedRefersh);
+                    }
+                    else tmpQueue.push(cur);
                 }
-                else tmpQueue.push(cur);
+                else
+                {
+                    if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)]))
+                    {
+                        // std::cerr << "TWT\n";
+                        Pos NeedRefersh = {-1, -1};
+                        Consume cs = GetConsume(cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)]);
+                        r[i].def -= cs.c;
+                        if (r[i].def <= 0)
+                        {
+                            NeedRefersh = RemoveGraphIcon(r[i]);
+                            ExpectedScore += r[i].val;
+                        }
+                        ActionOnBase(cs, b[GetBaseId(cur)]);
+                        SetMoveAction(t, cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)], cs, NeedRefersh);
+                    }
+                    else tmpQueue.push(cur);
+                }
             }
             while (!tmpQueue.empty())
             {
