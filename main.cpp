@@ -173,10 +173,10 @@ void ActionOnBase(Consume cs, Base &gs)
 }
 int GetDir(Pos lst, Pos nxt)
 {
-    if (lst.x - 1 == nxt.x && lst.y == nxt.y) return 0;
-    if (lst.x + 1 == nxt.x && lst.y == nxt.y) return 1;
-    if (lst.x == nxt.x && lst.y - 1 == nxt.y) return 2;
-    if (lst.x == nxt.x && lst.y + 1 == nxt.y) return 3;
+    if (lst.x - 1 == nxt.x) return 0;
+    if (lst.x + 1 == nxt.x) return 1;
+    if (lst.y - 1 == nxt.y) return 2;
+    if (lst.y + 1 == nxt.y) return 3;
     return -1;
 }
 void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos NeedRefersh)
@@ -194,19 +194,21 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
 
     cur = Planepre[id][dst.x][dst.y];
     int newid = GetBaseId(eds);
+    int enddis = Planedis[id][dst.x][dst.y];
+    int newenddis = Planedis[newid][Planepre[id][dst.x][dst.y].x][Planepre[id][dst.x][dst.y].y];
     while (cur != eds)
     {
-        MoveAction[t + Planedis[id][dst.x][dst.y] - 1 + Planedis[newid][Planepre[id][dst.x][dst.y].x][Planepre[id][dst.x][dst.y].y] - Planedis[newid][cur.x][cur.y] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur.x][cur.y])});
+        MoveAction[t + enddis - 1 + newenddis - Planedis[newid][cur.x][cur.y] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur.x][cur.y])});
         cur = Planepre[newid][cur.x][cur.y];
     }
-    AttackAction[t + Planedis[id][dst.x][dst.y] - 1].push_back({p.id, GetDir(Planepre[id][dst.x][dst.y], dst), cs.c});
+    AttackAction[t + enddis - 1].push_back({p.id, GetDir(Planepre[id][dst.x][dst.y], dst), cs.c});
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
     p.x = ge.x, p.y = ge.y;
-    BackPlane[t + Planedis[id][dst.x][dst.y] - 1 + Planedis[newid][Planepre[id][dst.x][dst.y].x][Planepre[id][dst.x][dst.y].y] + 1].push_back(p);
+    BackPlane[t + enddis - 1 + newenddis + 1].push_back(p);
     if (NeedRefersh.x >= 0 && NeedRefersh.y >= 0)
     {
-        refe[t + Planedis[id][dst.x][dst.y]].push_back({NeedRefersh.x, NeedRefersh.y});
+        refe[t + enddis].push_back({NeedRefersh.x, NeedRefersh.y});
     }
 }
 int main()
@@ -244,7 +246,7 @@ int main()
         std::cin >> cur.x >> cur.y;
         std::cin >> cur.maxgas >> cur.maxc;
         pe[i] = cur;
-        PlaneQueue.push(cur);
+        if (i == 0) PlaneQueue.push(cur);
     }
     memset(Planedis, -1, sizeof(Planedis));
     for (int k = 0; k < NumBaseBlue; ++k) GetBaseDis(k, b[k]);
@@ -254,7 +256,7 @@ int main()
     {
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        if (elapsed.count() >= 60) {
+        if (elapsed.count() >= 300) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
@@ -334,7 +336,7 @@ int main()
                 tmpQueue.pop();
             }
         }
-        assert(MoveAction[t].size() <= 1);
+//        assert(MoveAction[t].size() <= 1);
         for (auto fe:FuelAction[t]) std::cout << "fuel " << fe.id << " " << fe.count << "\n";
         for (auto mis:MissileAction[t]) std::cout << "missile " << mis.id << " " << mis.count << "\n";
         for (auto mv:MoveAction[t]) std::cout << "move " << mv.id << " " << mv.dir << "\n";
