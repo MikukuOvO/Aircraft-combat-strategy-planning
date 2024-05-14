@@ -189,11 +189,13 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     Pos eds = {ge.x, ge.y};
     int id = GetBaseId(src);
     Pos cur = Planepre[id][dst.x][dst.y];
+    int delta = t + Planedis[id][cur.x][cur.y] - 1;
     while (cur != src)
     {
-        MoveAction[t + Planedis[id][cur.x][cur.y] - 1].push_back({p.id, GetDir(Planepre[id][cur.x][cur.y], cur)});
+        MoveAction[delta].push_back({p.id, GetDir(Planepre[id][cur.x][cur.y], cur)});
 //        std::cerr<<"go"<<t + Planedis[id][cur.x][cur.y] - 1<<"\n";
         cur = Planepre[id][cur.x][cur.y];
+        --delta;
     }
 
     cur = Planepre[id][dst.x][dst.y];
@@ -201,18 +203,14 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     int newid = GetBaseId(eds);
     int enddis = Planedis[id][Planepre[id][cur.x][cur.y].x][Planepre[id][cur.x][cur.y].y] + 1;
     int newenddis = Planedis[newid][Planepre[id][dst.x][dst.y].x][Planepre[id][dst.x][dst.y].y];
+    delta = t + enddis + newenddis - Planedis[newid][cur.x][cur.y];
     while (cur != eds)
     {
-        MoveAction[t + enddis + newenddis - Planedis[newid][cur.x][cur.y]].push_back({p.id, GetDir(cur, Planepre[newid][cur.x][cur.y])});
+        MoveAction[delta].push_back({p.id, GetDir(cur, Planepre[newid][cur.x][cur.y])});
 //        std::cerr<<"re"<<t + enddis + newenddis - Planedis[newid][cur.x][cur.y]<<"\n";
 //        std::cerr<<"qwq"<<t + enddis<<"\n";
         cur = Planepre[newid][cur.x][cur.y];
-    }
-    if (GetDir(Planepre[id][dst.x][dst.y], dst) == -1){
-//        std::cerr<<Planepre[id][dst.x][dst.y].x<< " "<< Planepre[id][dst.x][dst.y].y<<"\n";
-//        std::cerr<<dst.x<< " "<< dst.y<<"\n";
-//        std::cerr<<Planedis[id][dst.x][dst.y]<<"\n";
-        assert(1 == 0);
+        ++delta;
     }
     AttackAction[t + enddis].push_back({p.id, GetDir(Planepre[id][dst.x][dst.y], dst), cs.c});
 //    std::cerr<<"at"<<t + enddis<<"\n";
@@ -228,9 +226,9 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
 }
 int main()
 {
-    freopen("../testcase2.in", "r", stdin);
-    freopen("../testcase2.out", "w", stdout);
-    srand(521);
+    freopen("../testcase3.in", "r", stdin);
+    freopen("../testcase3.out", "w", stdout);
+    srand(507);
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
@@ -271,7 +269,7 @@ int main()
     {
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        if (elapsed.count() >= 150) {
+        if (elapsed.count() >= 1200) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
