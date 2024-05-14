@@ -226,8 +226,8 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
 }
 int main()
 {
-    freopen("../testcase3.in", "r", stdin);
-    freopen("../testcase3.out", "w", stdout);
+    freopen("../testcase2.in", "r", stdin);
+    freopen("../testcase2.out", "w", stdout);
     srand(507);
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
@@ -291,7 +291,7 @@ int main()
             {
                 Plane cur = PlaneQueue.front();
                 PlaneQueue.pop();
-                if (1.0 * rand() / RAND_MAX > std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc))
+                if ((1.0 * rand() / RAND_MAX) * (1.0 * rand() / RAND_MAX) > std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc))
                 {
                     int newid = -1;
                     int maxval = 0;
@@ -299,7 +299,7 @@ int main()
                     {
                         if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)], b[j]))
                         {
-                            int curval = b[j].gas * b[j].c;
+                            int curval = b[j].gas * b[j].c / GetDis({b[j].x, b[j].y}, {r[i].x, r[i].y});
                             if (curval > maxval)
                             {
                                 newid = j;
