@@ -84,11 +84,11 @@ struct Missile
     int id, count;
 };
 
-std::vector<Move> MoveAction[MaxT + 5];
-std::vector<Attack> AttackAction[MaxT + 5];
-std::vector<Fuel> FuelAction[MaxT + 5];
-std::vector<Missile> MissileAction[MaxT + 5];
-std::vector<Plane> BackPlane[MaxT + 5];
+std::vector<Move> MoveAction[MaxT + N];
+std::vector<Attack> AttackAction[MaxT + N];
+std::vector<Fuel> FuelAction[MaxT + N];
+std::vector<Missile> MissileAction[MaxT + N];
+std::vector<Plane> BackPlane[MaxT + N];
 
 // std::map<Pos, int> Planedis[K];
 //std::map<Pos, Pos> Planepre[N];
@@ -138,7 +138,8 @@ int GetBaseId(Pos cur)
 int GetDis(Pos src, Pos dst)
 {
     int id = GetBaseId(src);
-    if (Planedis[id][dst.x][dst.y] == -1) return 1e9;
+//    std::cerr<<"ttt"<<Planedis[id][dst.x][dst.y]<<"\n";
+    if (Planedis[id][dst.x][dst.y] < 0) return 1e9;
     return Planedis[id][dst.x][dst.y];
 }
 bool CheckPlaneCanGo(Plane p, Base gd, Base gs, Base ge)
@@ -147,6 +148,8 @@ bool CheckPlaneCanGo(Plane p, Base gd, Base gs, Base ge)
     Pos dst = {gd.x, gd.y};
     Pos eds = {ge.x, ge.y};
     int id = GetBaseId(src);
+    if (GetDis(src, dst) >= 1e9 || GetDis(eds, Planepre[id][dst.x][dst.y]) >= 1e9) return false;
+//    std::cerr<<GetDis(src, dst)<<"\n";
     int dis1 = GetDis(src, Planepre[id][dst.x][dst.y]), dis2 = GetDis(eds, Planepre[id][dst.x][dst.y]);
     if (dis1 + dis2 <= gs.gas + p.gas && dis1 + dis2 <= p.maxgas) return true;
     return false;
@@ -189,23 +192,35 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
     while (cur != src)
     {
         MoveAction[t + Planedis[id][cur.x][cur.y] - 1].push_back({p.id, GetDir(Planepre[id][cur.x][cur.y], cur)});
+//        std::cerr<<"go"<<t + Planedis[id][cur.x][cur.y] - 1<<"\n";
         cur = Planepre[id][cur.x][cur.y];
     }
 
     cur = Planepre[id][dst.x][dst.y];
+//    std::cerr<<cur.x<< " "<< cur.y<<"\n";
     int newid = GetBaseId(eds);
-    int enddis = Planedis[id][dst.x][dst.y];
+    int enddis = Planedis[id][Planepre[id][cur.x][cur.y].x][Planepre[id][cur.x][cur.y].y] + 1;
     int newenddis = Planedis[newid][Planepre[id][dst.x][dst.y].x][Planepre[id][dst.x][dst.y].y];
     while (cur != eds)
     {
-        MoveAction[t + enddis - 1 + newenddis - Planedis[newid][cur.x][cur.y] + 1].push_back({p.id, GetDir(cur, Planepre[newid][cur.x][cur.y])});
+        MoveAction[t + enddis + newenddis - Planedis[newid][cur.x][cur.y]].push_back({p.id, GetDir(cur, Planepre[newid][cur.x][cur.y])});
+//        std::cerr<<"re"<<t + enddis + newenddis - Planedis[newid][cur.x][cur.y]<<"\n";
+//        std::cerr<<"qwq"<<t + enddis<<"\n";
         cur = Planepre[newid][cur.x][cur.y];
     }
-    AttackAction[t + enddis - 1].push_back({p.id, GetDir(Planepre[id][dst.x][dst.y], dst), cs.c});
+    if (GetDir(Planepre[id][dst.x][dst.y], dst) == -1){
+//        std::cerr<<Planepre[id][dst.x][dst.y].x<< " "<< Planepre[id][dst.x][dst.y].y<<"\n";
+//        std::cerr<<dst.x<< " "<< dst.y<<"\n";
+//        std::cerr<<Planedis[id][dst.x][dst.y]<<"\n";
+        assert(1 == 0);
+    }
+    AttackAction[t + enddis].push_back({p.id, GetDir(Planepre[id][dst.x][dst.y], dst), cs.c});
+//    std::cerr<<"at"<<t + enddis<<"\n";
     FuelAction[t].push_back({p.id, cs.gas});
     MissileAction[t].push_back({p.id, cs.c});
     p.x = ge.x, p.y = ge.y;
-    BackPlane[t + enddis - 1 + newenddis + 1].push_back(p);
+    BackPlane[t + enddis + newenddis].push_back(p);
+//    std::cerr<<"bp"<<t + enddis  + newenddis<<"\n";
     if (NeedRefersh.x >= 0 && NeedRefersh.y >= 0)
     {
         refe[t + enddis].push_back({NeedRefersh.x, NeedRefersh.y});
@@ -215,7 +230,7 @@ int main()
 {
     freopen("../testcase2.in", "r", stdin);
     freopen("../testcase2.out", "w", stdout);
-    srand(909);
+    srand(521);
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
@@ -256,7 +271,7 @@ int main()
     {
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        if (elapsed.count() >= 300) {
+        if (elapsed.count() >= 150) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
@@ -325,6 +340,9 @@ int main()
                             ExpectedScore += r[i].val;
                         }
                         ActionOnBase(cs, b[GetBaseId(cur)]);
+//                        std::cerr<<r[i].x<<" "<<r[i].y<<"\n";
+//                        std::cerr<<b[GetBaseId(cur)].x<<" "<<b[GetBaseId(cur)].y<<"\n";
+//                        std::cerr<<"dis"<<GetDis({b[GetBaseId(cur)].x, b[GetBaseId(cur)].y}, {r[i].x,r[i].y})<<"\n";
                         SetMoveAction(t, cur, r[i], b[GetBaseId(cur)], b[GetBaseId(cur)], cs, NeedRefersh);
                     }
                     else tmpQueue.push(cur);
@@ -337,10 +355,14 @@ int main()
             }
         }
 //        assert(MoveAction[t].size() <= 1);
+        if (MoveAction[t].size() > 1) {
+            std::cerr << t << "\n";
+            assert(MoveAction[t].size() <= 1);
+        }
+        for (auto atk:AttackAction[t]) std::cout << "attack " << atk.id << " " << atk.dir << " " << atk.count << "\n";
         for (auto fe:FuelAction[t]) std::cout << "fuel " << fe.id << " " << fe.count << "\n";
         for (auto mis:MissileAction[t]) std::cout << "missile " << mis.id << " " << mis.count << "\n";
         for (auto mv:MoveAction[t]) std::cout << "move " << mv.id << " " << mv.dir << "\n";
-        for (auto atk:AttackAction[t]) std::cout << "attack " << atk.id << " " << atk.dir << " " << atk.count << "\n";
         std::cout<<"OK\n";
     }
     std::cerr << "Break Program at: " << BreakTime << "\n";
