@@ -9,10 +9,13 @@
 #include <algorithm>
 #include <stdlib.h>
 #include <assert.h>
+#include "params.h"
 
 const int N = 4005;
 const int K = 155;
 const int MaxT = 15000;
+
+int mode;  // 0 for training, 1 for evaluation
 
 int n, m;
 int NumBaseBlue, NumBaseRed;
@@ -224,13 +227,22 @@ void SetMoveAction(int t, Plane p, Base gd, Base gs, Base ge, Consume cs, Pos Ne
         refe[t + enddis].push_back({NeedRefersh.x, NeedRefersh.y});
     }
 }
-int main()
+int main(int argc, char *argv[])
 {
-    freopen("../testcase2.in", "r", stdin);
-    freopen("../testcase2.out", "w", stdout);
+    freopen("./testcase2.in", "r", stdin);
+    freopen("./testcase2.out", "w", stdout);
     srand(507);
+
+    if (argc > 1) {
+        mode = atoi(argv[1]); // 0 for training, 1 for evaluation
+    } else {
+        mode = 0;
+    }
+    double time_limit = (mode == 1) ? 1500.0 : 40.0;
+
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
+    std::cerr << n<<"\n";
     for (int i = 0; i < n; ++i) std::cin >> s[i];
     std::cin >> NumBaseBlue;
     for (int i = 0; i < NumBaseBlue; ++i)
@@ -247,9 +259,9 @@ int main()
         std::cin >> r[i].gas >> r[i].c >> r[i].def >> r[i].val;
         TotalScore += r[i].val;
     }
-    std::sort(b, b + NumBaseBlue, [&](Base b1, Base b2)
+    std::sort(r, r + NumBaseRed, [&](Base r1, Base r2)
     {
-        return b1.val / std::max(1, b1.def) > b2.val / std::max(1, b2.def);
+        return red_base_value_weight * r1.val / std::max(1, r1.def) > red_base_value_weight * r2.val / std::max(1, r2.def);
     });
     std::cerr << "Total Score is: " << TotalScore << "\n";
     std::cin >> NumPlane;
@@ -269,7 +281,7 @@ int main()
     {
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        if (elapsed.count() >= 1200) {
+        if (elapsed.count() >= time_limit) {
             BreakTime = std::min(BreakTime, t);
             std::cout << "OK\n";
             continue;
@@ -291,7 +303,7 @@ int main()
             {
                 Plane cur = PlaneQueue.front();
                 PlaneQueue.pop();
-                if ((1.0 * rand() / RAND_MAX) * (1.0 * rand() / RAND_MAX) > std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc))
+                if ((rand_factor1 * rand() / RAND_MAX) * (rand_factor2 * rand() / RAND_MAX) > std::min(1.0 * b[GetBaseId(cur)].gas / b[GetBaseId(cur)].maxgas, 1.0 * b[GetBaseId(cur)].c / b[GetBaseId(cur)].maxc))
                 {
                     int newid = -1;
                     int maxval = 0;
@@ -299,7 +311,7 @@ int main()
                     {
                         if (CheckPlaneCanGo(cur, r[i], b[GetBaseId(cur)], b[j]))
                         {
-                            int curval = b[j].gas * b[j].c / GetDis({b[j].x, b[j].y}, {r[i].x, r[i].y});
+                            int curval = (gas_weight * b[j].gas + c_weight * b[j].c) / GetDis({b[j].x, b[j].y}, {r[i].x, r[i].y});
                             if (curval > maxval)
                             {
                                 newid = j;
