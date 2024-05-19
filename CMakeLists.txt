@@ -3,4 +3,4 @@ project(air)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(air main.cpp)
+add_executable(air main.cpp params.cpp)

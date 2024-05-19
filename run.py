@@ -3,35 +3,32 @@ import random
 from tqdm import tqdm
 
 # 设置训练次数
-NUM_EXPERIMENTS = 20
+NUM_EXPERIMENTS = 10
 LOCAL_SEARCH_ITER = 20
 STEP_SIZE = 0.2
 
 # 生成不同参数组合
 def generate_random_parameters(best_parameters=None, step_size=STEP_SIZE):
     if best_parameters:
-        rand_factor1 = max(0.5, min(2.0, best_parameters[0] + random.uniform(-step_size, step_size)))
-        rand_factor2 = max(0.5, min(2.0, best_parameters[1] + random.uniform(-step_size, step_size)))
+        rand_factor = max(0.5, min(2.0, best_parameters[0] + random.uniform(-step_size, step_size)))
         gas_weight = max(0.5, min(2.0, best_parameters[2] + random.uniform(-step_size, step_size)))
         c_weight = max(0.5, min(2.0, best_parameters[3] + random.uniform(-step_size, step_size)))
         red_base_value_weight = max(0.5, min(2.0, best_parameters[4] + random.uniform(-step_size, step_size)))
     else:
-        rand_factor1 = random.uniform(0.5, 2.0)
-        rand_factor2 = random.uniform(0.5, 2.0)
+        rand_factor = random.uniform(0.5, 2.0)
         gas_weight = random.uniform(0.5, 2.0)
         c_weight = random.uniform(0.5, 2.0)
         red_base_value_weight = random.uniform(0.5, 2.0)
 
-    return rand_factor1, rand_factor2, gas_weight, c_weight, red_base_value_weight
+    return rand_factor, gas_weight, c_weight, red_base_value_weight
 
 # 更新C++代码中的参数
-def update_cpp_code(rand_factor1, rand_factor2, gas_weight, c_weight, red_base_value_weight):
+def update_cpp_code(rand_factor, gas_weight, c_weight, red_base_value_weight):
     with open("params.cpp", "w") as file:
         file.write(f"""
 #include "params.h"
 
-double rand_factor1 = {rand_factor1};
-double rand_factor2 = {rand_factor2};
+double rand_factor = {rand_factor};
 double gas_weight = {gas_weight};
 double c_weight = {c_weight};
 double red_base_value_weight = {red_base_value_weight};
@@ -72,11 +69,11 @@ def train():
         else:
             parameters = generate_random_parameters()
 
-        rand_factor1, rand_factor2, gas_weight, c_weight, red_base_value_weight = parameters
+        rand_factor, gas_weight, c_weight, red_base_value_weight = parameters
 
-        print(f"Experiment {i + 1}: rand_factor1={rand_factor1}, rand_factor2={rand_factor2}, gas_weight={gas_weight}, c_weight={c_weight}, red_base_value_weight={red_base_value_weight}")
+        print(f"Experiment {i + 1}: rand_factor={rand_factor}, gas_weight={gas_weight}, c_weight={c_weight}, red_base_value_weight={red_base_value_weight}")
 
-        update_cpp_code(rand_factor1, rand_factor2, gas_weight, c_weight, red_base_value_weight)
+        update_cpp_code(rand_factor, gas_weight, c_weight, red_base_value_weight)
 
         score = run_cpp_program(mode=0)
         if score is None:
@@ -93,8 +90,8 @@ def train():
 
 # 评估过程
 def evaluate(parameters):
-    rand_factor1, rand_factor2, gas_weight, c_weight, red_base_value_weight = parameters
-    update_cpp_code(rand_factor1, rand_factor2, gas_weight, c_weight, red_base_value_weight)
+    rand_factor, gas_weight, c_weight, red_base_value_weight = parameters
+    update_cpp_code(rand_factor, gas_weight, c_weight, red_base_value_weight)
     score = run_cpp_program(mode=1)
     print(f"Evaluation Score: {score} with parameters: {parameters}")
     return score
