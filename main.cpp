@@ -9,7 +9,6 @@
 #include <algorithm>
 #include <stdlib.h>
 #include <assert.h>
-#include "params.h"
 
 const int N = 4005;
 const int M = 205;
@@ -20,6 +19,7 @@ int n, m;
 int NumBaseBlue, NumBaseRed;
 int NumPlane;
 int TotalScore, ExpectedScore;
+int parameter;
 std::string s[M];
 
 struct Pos
@@ -57,6 +57,11 @@ struct Plane
 Plane p[K];
 int dis[M][M], BaseId[M][M];
 Pos pre[M][M];
+
+struct Feature
+{
+    int gas, c, dis;
+};
 
 int dx[] = {-1, 1, 0, 0};
 int dy[] = {0, 0, -1, 1};
@@ -96,20 +101,26 @@ Pos Get2Enemy(Pos startpos)
     }
     return endpos;
 }
-Pos Get2Supply(Pos startpos)
+Pos Get2Supply(Pos startpos, Plane pl)
 {
     std::queue<Pos>PosQ;
     PosQ.push(startpos);
     Pos endpos = {-1, -1};
+    double MaxScore = -1e9;
     memset(dis, -1, sizeof(dis));
+    int FindSupplyCount = 0;
+    std::vector<Feature> feat;
     while (!PosQ.empty())
     {
         Pos cur = PosQ.front();
         PosQ.pop();
         if (s[cur.x][cur.y] == '*')
         {
-            endpos = cur;
-            break;
+            int bid = BaseId[cur.x][cur.y];
+            feat.push_back({std::min(pl.gas - dis[cur.x][cur.y] + b[bid].gas, pl.maxgas), std::min(pl.c + b[bid].c, pl.maxc), dis[cur.x][cur.y]});
+            ++FindSupplyCount;
+            if (endpos.x < 0 && endpos.y < 0) endpos = cur;
+            if (FindSupplyCount >= 20) break;
         }
         for (int i = 0; i < 4; ++i) {
             Pos ncur = {cur.x + dx[i], cur.y + dy[i]};
@@ -118,7 +129,7 @@ Pos Get2Supply(Pos startpos)
             {
                 dis[ncur.x][ncur.y] = dis[cur.x][cur.y] + 1;
                 pre[ncur.x][ncur.y] = cur;
-                PosQ.push(ncur);
+                if (dis[ncur.x][ncur.y] <= pl.gas) PosQ.push(ncur);
             }
         }
     }
@@ -130,8 +141,11 @@ void GetMoveAction(int id, Plane &pl)
     Pos startpos = {pl.x, pl.y};
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
-    int rid = BaseId[endpos.x][endpos.y];
-    if (pl.gas < dis[endpos.x][endpos.y] - 1 || pl.c == 0) endpos = Get2Supply(startpos);
+    if (pl.gas < dis[endpos.x][endpos.y] - 1 || pl.c < pl.maxc / 6.7) // Considering modify
+    {
+        Pos curpos = Get2Supply(startpos, pl);
+        if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;
+    }
     Pos cur = endpos;
     while (pre[cur.x][cur.y] != startpos) cur = pre[cur.x][cur.y];
     if (s[cur.x][cur.y] == '#') return;
@@ -179,8 +193,8 @@ void GetAttackAction(int pid, Plane &pl)
 }
 int main()
 {
-    freopen("../input/testcase10.in", "r", stdin);
-    freopen("../output/testcase10.out", "w", stdout);
+    freopen("../input/testcase5.in", "r", stdin);
+    freopen("../output/testcase5.out", "w", stdout);
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
@@ -200,8 +214,6 @@ int main()
         BaseId[r[i].x][r[i].y] = i;
         TotalScore += r[i].val;
     }
-
-    std::cerr << "Total Score is: " << TotalScore << "\n";
     std::cin >> NumPlane;
     for (int i = 0; i < NumPlane; ++i)
     {
@@ -215,8 +227,10 @@ int main()
     {
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
-        std::cerr << "Running on Epochs: " << t << ". The time now is: " << elapsed.count() << "seconds" << ". ";
-        std::cerr << "The Expected Score now is: " << ExpectedScore << "\n";
+        if (t % 1000 == 0) {
+            std::cerr << "Running on Epochs: " << t << ". The time now is: " << elapsed.count() << "seconds" << ". ";
+            std::cerr << "The Expected Score now is: " << ExpectedScore << "\n";
+        }
         for (int k = 0; k < NumPlane; ++k) {
             int bid = BaseId[p[k].x][p[k].y];
             if (s[p[k].x][p[k].y] == '*'){
@@ -230,8 +244,6 @@ int main()
     }
     std::cerr << "Break Program at: " << BreakTime << "\n";
     std::cerr << "Expected Score is: " << ExpectedScore << "\n";
+    std::cerr << "Total Score is: " << TotalScore << "\n";
     return 0;
 }
-
-// 下一步改进方向：飞机返航时判断哪个基地最合适，挑选最合适的基地进行降落：
-// 最合适的定义：剩余油量 / 距离 * (0.5 ^ 基地内飞机数)
