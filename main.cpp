@@ -101,8 +101,10 @@ Pos Get2Enemy(Pos startpos)
     }
     return endpos;
 }
-Pos Get2Supply(Pos startpos, Plane pl)
+Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
 {
+    // 先计算需要多少油或者多少导弹
+    int delta = pl.gas - dis[targetpos.x][targetpos.y];
     std::queue<Pos>PosQ;
     PosQ.push(startpos);
     Pos endpos = {-1, -1};
@@ -110,6 +112,7 @@ Pos Get2Supply(Pos startpos, Plane pl)
     memset(dis, -1, sizeof(dis));
     int FindSupplyCount = 0;
     std::vector<Feature> feat;
+    int maxval = -1;
     while (!PosQ.empty())
     {
         Pos cur = PosQ.front();
@@ -117,9 +120,8 @@ Pos Get2Supply(Pos startpos, Plane pl)
         if (s[cur.x][cur.y] == '*')
         {
             int bid = BaseId[cur.x][cur.y];
-            feat.push_back({std::min(pl.gas - dis[cur.x][cur.y] + b[bid].gas, pl.maxgas), std::min(pl.c + b[bid].c, pl.maxc), dis[cur.x][cur.y]});
             ++FindSupplyCount;
-            if (endpos.x < 0 && endpos.y < 0) endpos = cur;
+            if (b[bid].gas * b[bid].c > maxval) endpos = cur, maxval = b[bid].gas * b[bid].c;
             if (FindSupplyCount >= 20) break;
         }
         for (int i = 0; i < 4; ++i) {
@@ -141,9 +143,9 @@ void GetMoveAction(int id, Plane &pl)
     Pos startpos = {pl.x, pl.y};
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
-    if (pl.gas < dis[endpos.x][endpos.y] - 1 || pl.c < pl.maxc / 6.7) // Considering modify
+    if (pl.gas < dis[endpos.x][endpos.y]|| pl.c < r[BaseId[endpos.x][endpos.y]].def) // Considering modify
     {
-        Pos curpos = Get2Supply(startpos, pl);
+        Pos curpos = Get2Supply(startpos, pl, endpos);
         if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;
     }
     Pos cur = endpos;
@@ -193,8 +195,6 @@ void GetAttackAction(int pid, Plane &pl)
 }
 int main()
 {
-    freopen("../input/testcase5.in", "r", stdin);
-    freopen("../output/testcase5.out", "w", stdout);
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
