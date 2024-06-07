@@ -141,7 +141,7 @@ void GetMoveAction(int id, Plane &pl)
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
     int bid = BaseId[endpos.x][endpos.y];
-    if (pl.gas < dis[endpos.x][endpos.y] && (pl.gas < pl.maxgas / 2) || (pl.c < r[bid].def && pl.c < pl.maxc / 2)) // Considering modify
+    if (pl.gas < dis[endpos.x][endpos.y] / 2 && (pl.gas < pl.maxgas / 5) || (pl.c < pl.maxc / 2)) // Considering modify
     {
         Pos curpos = Get2Supply(startpos, pl, endpos);
         if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;
