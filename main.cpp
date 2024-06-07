@@ -117,9 +117,9 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
         if (s[cur.x][cur.y] == '*')
         {
             int bid = BaseId[cur.x][cur.y];
-            // 除了第五个以外的测试点
+            // 除了第5, 10个以外的测试点
             // int curVal = b[bid].gas * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
-            // 第五个测试点
+            // 第5, 10个测试点
             int curVal = std::max(std::min(pl.maxgas - pl.gas, b[bid].gas - pl.gas), 1) * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
             if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
             ++FindSupplyCount;
