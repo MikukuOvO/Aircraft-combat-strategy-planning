@@ -84,7 +84,7 @@ Pos Get2Enemy(Pos startpos)
         Pos cur = PosQ.front();
         PosQ.pop();
         if (s[cur.x][cur.y] == '#')
-        {
+        {           
             endpos = cur;
             break;
         }
@@ -103,16 +103,13 @@ Pos Get2Enemy(Pos startpos)
 }
 Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
 {
-    // 先计算需要多少油或者多少导弹
-    int delta = pl.gas - dis[targetpos.x][targetpos.y];
     std::queue<Pos>PosQ;
     PosQ.push(startpos);
     Pos endpos = {-1, -1};
-    double MaxScore = -1e9;
     memset(dis, -1, sizeof(dis));
     int FindSupplyCount = 0;
     std::vector<Feature> feat;
-    int maxval = -1;
+    int MaxVal = -1;
     while (!PosQ.empty())
     {
         Pos cur = PosQ.front();
@@ -120,14 +117,19 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
         if (s[cur.x][cur.y] == '*')
         {
             int bid = BaseId[cur.x][cur.y];
-            ++FindSupplyCount;
-            if (b[bid].gas * b[bid].c > maxval) endpos = cur, maxval = b[bid].gas * b[bid].c;
-            if (FindSupplyCount >= 20) break;
+            if (std::min(pl.maxgas, b[bid].gas) >= dis[cur.x][cur.y] * 2 || (b[bid].c > 0 && pl.c < pl.maxc / 2))
+            {
+                int curVal = (std::min(pl.maxgas, b[bid].gas) + 1) * (std::min(pl.maxc, b[bid].c) + 1);
+                if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
+                ++FindSupplyCount;
+            }
+            if (FindSupplyCount >= 50) break;
+            
         }
         for (int i = 0; i < 4; ++i) {
             Pos ncur = {cur.x + dx[i], cur.y + dy[i]};
             if (ncur.x < 0 || ncur.x >= n || ncur.y < 0 || ncur.y >= m) continue;
-            if (dis[ncur.x][ncur.y] < 0)
+            if (dis[ncur.x][ncur.y] < 0 && s[ncur.x][ncur.y] != '#')
             {
                 dis[ncur.x][ncur.y] = dis[cur.x][cur.y] + 1;
                 pre[ncur.x][ncur.y] = cur;
@@ -143,7 +145,8 @@ void GetMoveAction(int id, Plane &pl)
     Pos startpos = {pl.x, pl.y};
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
-    if (pl.gas < dis[endpos.x][endpos.y]|| pl.c < r[BaseId[endpos.x][endpos.y]].def) // Considering modify
+    int bid = BaseId[endpos.x][endpos.y];
+    if (pl.gas < dis[endpos.x][endpos.y] && (pl.gas < pl.maxgas / 2) || (pl.c < r[bid].def && pl.c < pl.maxc / 2)) // Considering modify
     {
         Pos curpos = Get2Supply(startpos, pl, endpos);
         if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;

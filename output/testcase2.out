@@ -5276,5917 +5276,87 @@ OK
 move 0 2
 attack 0 2 6
 OK
-move 0 1
+move 0 0
 OK
-move 0 1
+move 0 0
 OK
-move 0 1
+move 0 0
 OK
-fuel 0 6
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+move 0 0
+OK
+fuel 0 12
 missile 0 7
-move 0 2
+move 0 0
 OK
-move 0 2
+move 0 0
 OK
-move 0 2
+move 0 0
 OK
 fuel 0 3
 missile 0 0
-move 0 2
+move 0 3
 OK
 fuel 0 1
 missile 0 0
-move 0 0
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
+move 0 3
 OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
+move 0 3
 OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 1
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
-fuel 0 2
+fuel 0 8
 missile 0 0
-move 0 1
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
-move 0 1
+move 0 3
 OK
 fuel 0 5
 missile 0 0
 move 0 3
 OK
-fuel 0 1
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
 move 0 3
 OK
 move 0 3
 OK
 move 0 3
 OK
-fuel 0 3
-missile 0 0
-move 0 1
+move 0 3
 OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
+move 0 3
 OK
 fuel 0 6
 missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 7
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 3
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 9
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 9
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 10
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 10
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 6
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 3
-OK
-fuel 0 7
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 6
-missile 0 0
-move 0 1
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 3
-OK
-fuel 0 7
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 5
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 3
-OK
-fuel 0 2
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 2
-missile 0 0
-move 0 3
-OK
-move 0 3
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 2
-OK
-fuel 0 1
-missile 0 0
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 5
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 3
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 3
-missile 0 0
-move 0 3
-OK
 move 0 3
 OK
-move 0 3
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 6
-missile 0 0
-move 0 1
-OK
 fuel 0 1
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 3
-OK
-fuel 0 3
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-move 0 1
-OK
-fuel 0 4
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 4
 missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
 move 0 3
-OK
-fuel 0 7
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
 OK
 move 0 3
 OK
@@ -11199,48 +5369,6 @@ OK
 move 0 3
 OK
 fuel 0 3
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 0
-OK
-move 0 1
-OK
-fuel 0 2
-missile 0 0
-move 0 1
-OK
-move 0 1
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-move 0 2
-OK
-fuel 0 6
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 2
 missile 0 0
 move 0 3
 OK
@@ -11249,38 +5377,6 @@ OK
 move 0 3
 OK
 fuel 0 3
-missile 0 0
-move 0 3
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-move 0 0
-OK
-fuel 0 9
-missile 0 0
-move 0 0
-OK
-fuel 0 1
-missile 0 0
-move 0 0
-OK
-fuel 0 1
 missile 0 0
 move 0 3
 OK
@@ -12207,6 +6303,2072 @@ move 0 1
 OK
 move 0 1
 attack 0 2 6
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
 OK
 OK
 OK
