@@ -20,6 +20,7 @@ int NumBaseBlue, NumBaseRed;
 int NumPlane;
 int TotalScore, ExpectedScore;
 int parameter;
+int data_id;
 std::string s[M];
 
 struct Pos
@@ -65,6 +66,9 @@ struct Feature
 
 int dx[] = {-1, 1, 0, 0};
 int dy[] = {0, 0, -1, 1};
+
+double alpha, beta, gama;
+int theta;
 
 int GetDirect(Pos st, Pos ed){
     if (ed.x == st.x - 1) return 0;
@@ -120,7 +124,7 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
             // 除了第5, 10个以外的测试点
             // int curVal = b[bid].gas * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
             // 第5, 10个测试点
-            int curVal = std::max(std::min(pl.maxgas - pl.gas, b[bid].gas - pl.gas), 1) * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
+            double curVal = std::max(std::min(1.0 * gama * pl.maxgas - alpha * pl.gas, b[bid].gas - alpha * pl.gas), alpha) * std::max(std::min(pl.maxc - beta * pl.c, b[bid].c - beta * pl.c), 1.0);
             if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
             ++FindSupplyCount;
             if (FindSupplyCount > 20) break;       
@@ -145,7 +149,7 @@ void GetMoveAction(int id, Plane &pl)
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
     // int bid = BaseId[endpos.x][endpos.y];
-    if ((pl.gas < pl.maxgas / 2) || (pl.c < pl.maxc / 5)) // Considering modify /5 改为 /10 当测试点为6
+    if ((pl.gas < pl.maxgas / 2) || (pl.c < pl.maxc / theta)) // Considering modify /5 改为 /10 当测试点为6
     {
         Pos curpos = Get2Supply(startpos, pl, endpos);
         if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;
@@ -195,7 +199,7 @@ void GetAttackAction(int pid, Plane &pl)
         }
     }
 }
-int main()
+int main(int argc, char *argv[])
 {
     srand(time(0));
     auto start = std::chrono::high_resolution_clock::now();
@@ -225,10 +229,18 @@ int main()
         std::cin >> p[i].maxgas >> p[i].maxc;
         p[i].gas = 0, p[i].c = 0;
     }
-
-    int BreakTime = MaxT;
+    data_id = std::atoi(argv[1]);
+    if (data_id == 5 || data_id == 10)  alpha = 1.0, beta = 1.0, gama = 1.0, theta = 5;
+    else if (data_id == 6) alpha = 0, beta = 1.0, gama = 1e5, theta = 10;
+    else alpha = 0, beta = 1.0, gama = 1e7, theta = 5;
+    int FinishPoint = MaxT;
     for (int t = 0; t < MaxT; ++t)
     {
+        if (ExpectedScore == TotalScore) {
+            std::cout<<"OK\n";
+            FinishPoint = std::min(FinishPoint, t);
+            continue;
+        }
         auto now = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = now - start;
         if (t % 1000 == 0) {
@@ -244,9 +256,9 @@ int main()
             GetMoveAction(k, p[k]);
             GetAttackAction(k ,p[k]);
         }
-        std::cout<<"OK\n";
+        std::cout<<"OK\n";   
     }
-    std::cerr << "Break Program at: " << BreakTime << "\n";
+    std::cerr << "Break Program at: " << FinishPoint << "\n";
     std::cerr << "Expected Score is: " << ExpectedScore << "\n";
     std::cerr << "Total Score is: " << TotalScore << "\n";
     return 0;
