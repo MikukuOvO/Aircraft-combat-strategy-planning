@@ -26,18 +26,9 @@ std::string s[M];
 struct Pos
 {
     int x, y;
-    bool operator==(const Pos& other) const
-    {
-        return x == other.x && y == other.y;
-    }
     bool operator!=(const Pos& other) const
     {
         return x != other.x || y != other.y;
-    }
-    bool operator<(const Pos& other) const
-    {
-        if (x == other.x) return y < other.y;
-        return x < other.x;
     }
 };
 
@@ -121,9 +112,6 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
         if (s[cur.x][cur.y] == '*')
         {
             int bid = BaseId[cur.x][cur.y];
-            // 除了第5, 10个以外的测试点
-            // int curVal = b[bid].gas * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
-            // 第5, 10个测试点
             double curVal = std::max(std::min(1.0 * gama * pl.maxgas - alpha * pl.gas, b[bid].gas - alpha * pl.gas), alpha) * std::max(std::min(pl.maxc - beta * pl.c, b[bid].c - beta * pl.c), 1.0);
             if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
             ++FindSupplyCount;
@@ -148,8 +136,7 @@ void GetMoveAction(int id, Plane &pl)
     Pos startpos = {pl.x, pl.y};
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
-    // int bid = BaseId[endpos.x][endpos.y];
-    if ((pl.gas < pl.maxgas / 2) || (pl.c < pl.maxc / theta)) // Considering modify /5 改为 /10 当测试点为6
+    if ((pl.gas < pl.maxgas / 2) || (pl.c < pl.maxc / theta)) 
     {
         Pos curpos = Get2Supply(startpos, pl, endpos);
         if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;
@@ -250,11 +237,9 @@ int main(int argc, char *argv[])
         for (int k = 0; k < NumPlane; ++k) {
             int bid = BaseId[p[k].x][p[k].y];
             if (s[p[k].x][p[k].y] == '*'){
-                AddFuel(k, p[k], bid);
-                AddMissile(k, p[k], bid);
+                AddFuel(k, p[k], bid), AddMissile(k, p[k], bid);
             }
-            GetMoveAction(k, p[k]);
-            GetAttackAction(k ,p[k]);
+            GetMoveAction(k, p[k]), GetAttackAction(k ,p[k]);
         }
         std::cout<<"OK\n";   
     }
