@@ -117,14 +117,9 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
         if (s[cur.x][cur.y] == '*')
         {
             int bid = BaseId[cur.x][cur.y];
-            if (std::min(pl.maxgas, b[bid].gas) >= dis[cur.x][cur.y] * 2 || (b[bid].c > 0 && pl.c < pl.maxc / 2))
-            {
-                int curVal = (std::min(pl.maxgas, b[bid].gas) + 1) * (std::min(pl.maxc, b[bid].c) + 1);
-                if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
-                ++FindSupplyCount;
-            }
-            if (FindSupplyCount >= 50) break;
-            
+            int curVal = b[bid].gas * (std::min(pl.maxc, b[bid].c) + 1);
+            if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
+            ++FindSupplyCount;       
         }
         for (int i = 0; i < 4; ++i) {
             Pos ncur = {cur.x + dx[i], cur.y + dy[i]};
@@ -198,6 +193,7 @@ void GetAttackAction(int pid, Plane &pl)
 }
 int main()
 {
+    srand(time(0));
     auto start = std::chrono::high_resolution_clock::now();
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i) std::cin >> s[i];
@@ -208,6 +204,7 @@ int main()
         std::cin >> b[i].x >> b[i].y;
         std::cin >> b[i].gas >> b[i].c >> b[i].def >> b[i].val;
         BaseId[b[i].x][b[i].y] = i;
+        if (b[i].gas <= 0 && b[i].c <= 0) s[b[i].x][b[i].y] = '.';
     }
     std::cin >> NumBaseRed;
     for (int i = 0; i < NumBaseRed; ++i)
