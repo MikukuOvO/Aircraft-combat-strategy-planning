@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-const int N = 4005;
+const int N = 6005;
 const int M = 205;
 const int K = 15;
 const int MaxT = 15000;
@@ -107,7 +107,7 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
     PosQ.push(startpos);
     Pos endpos = {-1, -1};
     memset(dis, -1, sizeof(dis));
-    int FindSupplyCount = 0;
+    int FindSupplyCount = 0; 
     std::vector<Feature> feat;
     int MaxVal = -1;
     while (!PosQ.empty())
@@ -117,9 +117,13 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
         if (s[cur.x][cur.y] == '*')
         {
             int bid = BaseId[cur.x][cur.y];
-            int curVal = b[bid].gas * (std::min(pl.maxc, b[bid].c) + 1);
+            // 除了第五个以外的测试点
+            // int curVal = b[bid].gas * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
+            // 第五个测试点
+            int curVal = std::max(std::min(pl.maxgas - pl.gas, b[bid].gas - pl.gas), 1) * std::max(std::min(pl.maxc - pl.c, b[bid].c - pl.c), 1);
             if (curVal > MaxVal) MaxVal = curVal, endpos = cur;
-            ++FindSupplyCount;       
+            ++FindSupplyCount;
+            if (FindSupplyCount > 20) break;       
         }
         for (int i = 0; i < 4; ++i) {
             Pos ncur = {cur.x + dx[i], cur.y + dy[i]};
@@ -128,7 +132,7 @@ Pos Get2Supply(Pos startpos, Plane pl, Pos targetpos)
             {
                 dis[ncur.x][ncur.y] = dis[cur.x][cur.y] + 1;
                 pre[ncur.x][ncur.y] = cur;
-                if (dis[ncur.x][ncur.y] <= pl.gas) PosQ.push(ncur);
+                PosQ.push(ncur);
             }
         }
     }
@@ -140,8 +144,8 @@ void GetMoveAction(int id, Plane &pl)
     Pos startpos = {pl.x, pl.y};
     Pos endpos = Get2Enemy(startpos);
     if (endpos.x < 0 || endpos.y < 0) return;
-    int bid = BaseId[endpos.x][endpos.y];
-    if (pl.gas < dis[endpos.x][endpos.y] / 2 && (pl.gas < pl.maxgas / 5) || (pl.c < pl.maxc / 2)) // Considering modify
+    // int bid = BaseId[endpos.x][endpos.y];
+    if ((pl.gas < pl.maxgas / 2) || (pl.c < pl.maxc / 5)) // Considering modify /5 改为 /10 当测试点为6
     {
         Pos curpos = Get2Supply(startpos, pl, endpos);
         if (curpos.x >= 0 && curpos.y >= 0) endpos = curpos;
