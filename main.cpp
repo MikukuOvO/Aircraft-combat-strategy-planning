@@ -1,14 +1,11 @@
 #include <iostream>
 #include <string>
 #include <queue>
-#include <map>
 #include <vector>
 #include <string.h>
 #include <chrono>
 #include <random>
 #include <algorithm>
-#include <stdlib.h>
-#include <assert.h>
 
 const int N = 6005;
 const int M = 205;
@@ -246,5 +243,8 @@ int main(int argc, char *argv[])
     std::cerr << "Break Program at: " << FinishPoint << "\n";
     std::cerr << "Expected Score is: " << ExpectedScore << "\n";
     std::cerr << "Total Score is: " << TotalScore << "\n";
+    auto now = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = now - start;
+    std::cerr << "The total time is: " << elapsed.count() << "seconds" << ".\n";
     return 0;
 }
